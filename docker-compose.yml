@@ -1,0 +1,21 @@
+# Plato as a Portainer stack (or: docker compose up -d --build).
+# Set PLATO_PASSWORD in the stack's environment variables before deploying.
+services:
+  plato:
+    build: .
+    image: plato:latest
+    container_name: plato
+    restart: unless-stopped
+    ports:
+      - "8765:8765"
+    environment:
+      PLATO_HOST: 0.0.0.0
+      PLATO_PORT: "8765"
+      PLATO_PASSWORD: ${PLATO_PASSWORD:?set PLATO_PASSWORD}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    volumes:
+      - plato-data:/app/data
+      - plato-exports:/app/exports
+volumes:
+  plato-data:
+  plato-exports:

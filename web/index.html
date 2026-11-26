@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plato the Foodie Philosopher</title>
+  <link rel="stylesheet" href="/style-guide/plato-bootstrap.css">
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/vendor/leaflet-markercluster/MarkerCluster.css">
+  <link rel="stylesheet" href="/vendor/leaflet-markercluster/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="/css/plato.css">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top plato-nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/map" title="The unexamined meal is not worth eating">🏛️ Plato <small>the Foodie Philosopher</small></a>
+      </div>
+      <ul class="nav navbar-nav" id="nav-links">
+        <li data-page="map"><a href="#/map">Map</a></li>
+        <li data-page="lists"><a href="#/lists">Lists</a></li>
+        <li data-page="tags"><a href="#/tags">Tags</a></li>
+        <li data-page="timeline"><a href="#/timeline">Timeline</a></li>
+        <li data-page="import"><a href="#/import">Import</a></li>
+      </ul>
+      <div class="navbar-right plato-nav-right">
+        <span class="label label-warning hidden" id="offline-badge" title="Server unreachable: changes are kept in this browser">browser storage</span>
+        <button class="btn btn-default btn-sm navbar-btn hidden" id="ask-button" data-act="ask-toggle">💬 Ask Plato</button>
+        <button class="btn btn-default btn-sm navbar-btn" data-act="settings-open" title="Settings">⚙</button>
+      </div>
+    </div>
+  </nav>
+  <main id="view"></main>
+  <div id="ask-root"></div>
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <script src="/vendor/leaflet/leaflet.js"></script>
+  <script src="/vendor/leaflet-markercluster/leaflet.markercluster.js"></script>
+  <script src="/js/util.js"></script>
+  <script src="/js/store.js"></script>
+  <script src="/js/basemap.js"></script>
+  <script src="/js/places.js"></script>
+  <script src="/js/map.js"></script>
+  <script src="/js/lists.js"></script>
+  <script src="/js/tags.js"></script>
+  <script src="/js/timeline.js"></script>
+  <script src="/js/importer.js"></script>
+  <script src="/js/ask.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

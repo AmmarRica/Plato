@@ -1,0 +1,6 @@
+.git
+.venv
+data
+exports/*.html
+__pycache__
+.env

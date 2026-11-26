@@ -1,0 +1,6 @@
+data/
+exports/*.html
+.venv/
+.env
+__pycache__/
+*.pyc
